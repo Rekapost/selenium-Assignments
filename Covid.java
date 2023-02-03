@@ -42,7 +42,7 @@ public class Covid {
 		WebElement firstHospital=driver.findElement(By.xpath("//tr[1]//strong"));
 		String hospitalNmae=firstHospital.getText();
 		System.out.println(" first hospital name:" + hospitalNmae);
-
+        System.out.println();
 		
 		//**************    FINDING THE ALL HOSPITAL NAMES IN FIRST COLUMN     *********************
 			for(int i=1;i<=rows_count;i++)
