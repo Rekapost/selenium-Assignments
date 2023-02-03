@@ -40,8 +40,8 @@ public class Covid {
 
 		// *************   FINDING THE NAME OF THE HOSPITAL IN  FIRST ROW FIRST COLUMN [1][1]  **********************
 		WebElement firstHospital=driver.findElement(By.xpath("//tr[1]//strong"));
-		String hospitalNmae=firstHospital.getText();
-		System.out.println(" first hospital name:" + hospitalNmae);
+		String hospitalName=firstHospital.getText();
+		System.out.println(" first hospital name:" + hospitalName);
 
 		
 		//**************    FINDING THE ALL HOSPITAL NAMES IN FIRST COLUMN     *********************
