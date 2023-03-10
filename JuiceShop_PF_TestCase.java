@@ -37,7 +37,7 @@ public class JuiceShop_PF_TestCase {
 		chromeOptions.addArguments("window-size=1920,900");
 		driver = new ChromeDriver(chromeOptions);
 		//driver.get("http://tutorialsninja.com/demo/index.php");
-		//String URL="https://juice-shop.herokuapp.com/#/register";
+		String URL="https://juice-shop.herokuapp.com/#/register";
 		}
 	
 	public static void main(String[] args) throws InterruptedException, IOException {
