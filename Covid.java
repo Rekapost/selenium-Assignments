@@ -8,7 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
-
 public class Covid {
 	WebDriver driver;
 	@Test
@@ -40,16 +39,20 @@ public class Covid {
 
 		// *************   FINDING THE NAME OF THE HOSPITAL IN  FIRST ROW FIRST COLUMN [1][1]  **********************
 		WebElement firstHospital=driver.findElement(By.xpath("//tr[1]//strong"));
+
 		String hospitalNmae=firstHospital.getText();
 		System.out.println(" first hospital name:" + hospitalNmae);
         System.out.println();
-		
+
+		String hospitalName=firstHospital.getText();
+		System.out.println(" first hospital name:" + hospitalName);
+	
 		//**************    FINDING THE ALL HOSPITAL NAMES IN FIRST COLUMN     *********************
 			for(int i=1;i<=rows_count;i++)
 		{
 			WebElement eachHospital=driver.findElement(By.xpath("//tr["+i+"]//strong"));
-			String hospitalName=eachHospital.getText();
-			System.out.println("Names of the Hospital : " +hospitalName);
+			String hospitalName1=eachHospital.getText();
+			System.out.println("Names of the Hospital : " +hospitalName1);
 		}
 		 	
 		
@@ -74,8 +77,8 @@ public class Covid {
 			JavascriptExecutor jse = (JavascriptExecutor)driver;
 			//jse.executeScript("arguments[0].scrollIntoView()", eachHospital);  W1
 			jse.executeScript("arguments[0].click()", eachHospital);      //W2
-			String hospitalName=eachHospital.getText();
-			System.out.println("Names of the Hospital : " +hospitalName);
+			String hospitalName1=eachHospital.getText();
+			System.out.println("Names of the Hospital : " +hospitalName1);
 			Thread.sleep(1000);
 			//eachHospital.click();     W1
 			WebElement address=driver.findElement(By.xpath("//tr["+(i+1)+"]//span[contains(text(),'Phone')]"));

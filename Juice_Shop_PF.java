@@ -30,7 +30,7 @@ public class Juice_Shop_PF {
 		chromeOptions.setPageLoadTimeout(Duration.ofMillis(30000));
 		chromeOptions.setImplicitWaitTimeout(Duration.ofSeconds(20));
 		chromeOptions.addArguments("window-size=1920,900");
-		driver = new ChromeDriver(chromeOptions);
+		 driver = new ChromeDriver(chromeOptions);
 		}
 	@FindBy(how=How.XPATH, using="//body/div[1]/div/a")
 	public static WebElement meWantIt;	
